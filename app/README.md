@@ -1,2 +1,2 @@
-To install all N dependencies
-	npm install
+To install all NPM dependencies
+<pre><code>npm install</code></pre>
