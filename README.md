@@ -3,7 +3,7 @@ _(tentative name)_
 
 GitHub repository for RE 2015 Group 69 (Year 3) - IT project
 
-##Current tasks:
+##Current tasks
 Section | Person
 ------- | ------
 Front-End (User Experience) | @neonrsa
@@ -13,21 +13,3 @@ Back-End | @arnoldtan
 
 ##Display
 Currently locally hosted
-
-##Tasks
-- [x] file structure
-- [x] set-up node
-- [ ] back-end skeleton
-- [ ] templates
-- [ ] gray area
-- [ ] content (part a)
-  - [ ] real-time multi-person drawing app
-  - [ ] whiteboard feature
-  - [ ] chat
-  - [ ] straming audio-visual
-- [ ] content (part b)
-  - [ ] forums
-  - [ ] uploading feature
-  - [ ] announcements
-  - [ ] reminders
-- [ ] css and formatting
