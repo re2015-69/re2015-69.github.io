@@ -20,4 +20,14 @@ Currently locally hosted
 - [ ] back-end skeleton
 - [ ] templates
 - [ ] gray area
-- [ ] content
+- [ ] content (part a)
+  - [ ] real-time multi-person drawing app
+  - [ ] whiteboard feature
+  - [ ] chat
+  - [ ] straming audio-visual
+- [ ] content (part b)
+  - [ ] forums
+  - [ ] uploading feature
+  - [ ] announcements
+  - [ ] reminders
+- [ ] css and formatting
