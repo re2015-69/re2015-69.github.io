@@ -26,4 +26,5 @@ app/node_modules
 
 # Users Environment Variables
 .lock-wscript
+
 app/config.js

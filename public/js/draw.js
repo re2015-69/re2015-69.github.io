@@ -1,5 +1,4 @@
-var socket = io('127.0.0.1:3000/draw');
-
+var wb = new Whiteboard( "testy" );
 
 var ctx, color = "#000";	
 document.addEventListener( "DOMContentLoaded", function(){
@@ -26,7 +25,7 @@ function newCanvas(){
 	drawMouse();
 }
         
-function selectColor(el){
+function selectColor(el,dontPingWb){
     for(var i=0;i<document.getElementsByClassName("palette").length;i++){
         document.getElementsByClassName("palette")[i].style.borderColor = "#777";
         document.getElementsByClassName("palette")[i].style.borderStyle = "solid";
@@ -36,6 +35,7 @@ function selectColor(el){
     color = window.getComputedStyle(el).backgroundColor;
     ctx.beginPath();
     ctx.strokeStyle = color;
+	if ( !dontPingWb ) wb.changeColour( color );
 }
 // prototype to	start drawing on touch using canvas moveTo and lineTo
 var drawTouch = function() {
@@ -44,6 +44,7 @@ var drawTouch = function() {
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-44;
 		ctx.moveTo(x,y);
+		wb.startStroke( x , y );
 	};
 	var move = function(e) {
 		e.preventDefault();
@@ -51,6 +52,7 @@ var drawTouch = function() {
 		y = e.changedTouches[0].pageY-44;
 		ctx.lineTo(x,y);
 		ctx.stroke();
+		wb.continueStroke( x , y );
 	};
   document.getElementById("canvas").addEventListener("touchstart", start, false);
 	document.getElementById("canvas").addEventListener("touchmove", move, false);
@@ -64,6 +66,7 @@ var drawPointer = function() {
 		x = e.pageX;
 		y = e.pageY-44;
 		ctx.moveTo(x,y);
+		wb.startStroke( x , y );
 	};
 	var move = function(e) {
 		e.preventDefault();
@@ -72,6 +75,7 @@ var drawPointer = function() {
 		y = e.pageY-44;
 		ctx.lineTo(x,y);
 		ctx.stroke();
+		wb.continueStroke( x , y );
     };
   document.getElementById("canvas").addEventListener("MSPointerDown", start, false);
 	document.getElementById("canvas").addEventListener("MSPointerMove", move, false);
@@ -85,6 +89,7 @@ var drawMouse = function() {
 		x = e.pageX;
 		y = e.pageY-44;
 		ctx.moveTo(x,y);
+		wb.startStroke( x , y );
 	};
 	var move = function(e) {
 		if(clicked){
@@ -92,6 +97,7 @@ var drawMouse = function() {
 			y = e.pageY-44;
 			ctx.lineTo(x,y);
 			ctx.stroke();
+			wb.continueStroke( x , y );
 		}
 	};
 	var stop = function(e) {
@@ -101,3 +107,22 @@ var drawMouse = function() {
 	document.getElementById("canvas").addEventListener("mousemove", move, false);
 	document.addEventListener("mouseup", stop, false);
 };
+
+var elemap = {
+	"rgb(204, 34, 34)": "red",
+	"rgb(34, 204, 34)": "green",
+	"rgb(34, 34, 204)": "blue",
+	"rgb(0, 0, 0)": "black",
+	"rgb(255, 255, 255)": "white"
+}
+
+wb.receiveColour = function( colour ) {
+	selectColor( document.getElementsByClassName( elemap[colour] )[0] , true );
+}
+wb.receiveStartStroke = function( x , y ) {
+	ctx.moveTo( x , y );
+}
+wb.receiveContinueStroke = function( x , y ) {
+	ctx.lineTo( x , y );
+	ctx.stroke();
+}
