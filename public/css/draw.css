@@ -72,9 +72,11 @@ body {
     overflow:hidden;
     background-color:#ddd;
 }
-#canvas{
+canvas{
+	position: absolute;
+	left: 0px;
+	top: 0px;
     cursor:crosshair ;
-    background-color:#fff;
 }
 .palette-case {
     width:260px;
