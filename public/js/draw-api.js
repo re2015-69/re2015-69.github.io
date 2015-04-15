@@ -57,7 +57,7 @@ var Whiteboard = function( sroom ) {
 		socket.emit( "newlayer" , { "wbid": room, "lid": lid , "id": uid } );
 	}
 	this.initLayers = function() {
-		socket.emit( "layers" );
+		socket.emit( "layers" , { "wbid": room } );
 	}
 	var sthis = this;
 	socket.on( "colour" , function( colour ) {
