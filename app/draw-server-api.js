@@ -1,7 +1,7 @@
 console.log("Initialising Draw Server API . . .");
 module.exports = function( io ) {
 	var drawApp = io.of( "/draw" );
-	var layers = [];
+	var layers = {};
 	drawApp.on( "connection" , function( socket ) {
 		socket.on( "changeroom" , function( data ) {
 			socket.leave( data.o );
@@ -18,11 +18,12 @@ module.exports = function( io ) {
 		} );
 		socket.on( "newlayer" , function( data ) {
 			drawApp.to( data.wbid ).emit( "newlayer" , data );
-			layers.push( data );
+			layers[ data.wbid ].push( data );
 		} );
 		socket.on( "layers" , function( data ) {
-			console.log( layers );
-			for ( var i = 0 ; i < layers.length ; i++ ) socket.emit( "newlayer" , layers[i] );
+			var layarr = layers[ data.wbid ] || [];
+			for ( var i = 0 ; i < layarr.length ; i++ ) socket.emit( "newlayer" , layarr[i] );
+			layers[ data.wbid ] = layarr;
 		} );
 	} );
 }
