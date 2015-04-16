@@ -8,8 +8,10 @@ Section | Person
 ------- | ------
 Front-End (User Experience) | @neonrsa
 Front-End (User Interface) | @bjuniano
-Gray Area | @leafileaf, @Lhwhatever
+Communications API | @leafileaf
+Gray Area | @Lhwhatever
 Back-End | @arnoldtan
 
 ##Display
 Currently locally hosted
+http://tinyurl.com/re-thing-69/ whenever running
