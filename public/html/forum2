@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+body{
+background-color:#F5F5F5;
+}
+table{
+width:100%;
+background-color:#F5F5F5;
+}
+.skrub {
+border: 1px
+solid #F5F5F5;
+
+
+width: 100%;
+    height: 100px;
+background-color:#F5F5F5;
+color:#337ab7;
+padding-left:10px;
+} 
+.user{
+top:1px;
+text-align:center;
+height:95px;
+width:200px;
+    position: absolute;
+    left: 1300px;
+background-color:#F5F5F5;
+color:#337ab7;
+}
+.pic{
+text-align:center;
+height:95px;
+width:150px;
+   position: absolute;
+   top: 1px;
+   left: 1500px;
+background-color:#F5F5F5;
+color:#337ab7;
+}
+.out{
+height:100px;
+width:150px;
+position: absolute;
+top: 8px;
+left: 1850px;
+}
+.breadcrumb{
+}
+
+.swag{
+background-color: #F5F5F5;
+color:#337ab7;
+}
+
+.surch{
+padding-top:10px;
+padding-bottom:20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="skrub">
+<h1>
+Fluke Forums                           
+</h1>
+</div>
+
+<div class = "user">
+<p>
+Welcome, Swaglord!
+</p>
+<p>
+<img src = "https://s-media-cache-ak0.pinimg.com/236x/6d/b8/e7/6db8e79cecc630e38a65c69f9cf6c86f.jpg" style="width:128px;height:128px">
+</p>
+</div>
+
+<div class = pic>
+<button type="button" class="btn btn-default navbar-btn">Sign out</button>
+</div>
+
+<ol class="breadcrumb">
+  <li><a href="#">Raffles Institution</a></li>
+  <li><a href="#">Science</a></li>
+  <li class="active">Y3</li>
+</ol>
+
+<ul class="nav nav-tabs">
+  <li><a href="http://math.com">Math</a></li>
+  <li><a href="http://science.com">Science</a></li>
+  <li><a href="http://chinese.com">Chinese</a></li>
+<li><a href="http://english.com">English</a></li>
+<li><a href="http://literature.com">Literature</a></li>
+<li><a href="http://history.com">History</a></li>
+<li><a href="http://geography.com">Geography</a></li>
+<li><a href="http://philosophy.com">Philosophy</a></li>
+<li><a href="http://computer.com">CEP</a></li>
+<li><a href="http://art.com">AEP</a></li>
+<li><a href="http://random.org">Random</a></li>
+</ul>
+
+<div class = admin>
+</div>
+<div class = "swag">
+<h1>
+Recent Discussions
+</h1>
+</div>
+
+<div class = "surch">
+Search for Topics:
+  <input type="search" name="searchbar">
+  <input type="submit">
+</div>
+
+
+<div class = "table">
+<table border="1" style="height:700px">
+  <tr>
+    <td><h3>Y3 Science</h3></td>
+    <td><h3>Replies</h3></td>		
+    <td><h3>Views</h3></td>
+  </tr>
+  <tr>
+    <td><p>How to balance equation?????</p>
+<p>by <a href="skrub.html">skrub </a></p>
+</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+   <tr>
+    <td>Formulas for next week's test</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+ <tr>
+    <td>Atomic structure discussion</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+ <tr>
+    <td>Particulate nature of matter</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+ <tr>
+    <td>Help with WS 69</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+ <tr>
+    <td>What is Life</td>
+    <td>Number</td>		
+    <td>Number</td>
+  </tr>
+</table>
+</div>
+
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
